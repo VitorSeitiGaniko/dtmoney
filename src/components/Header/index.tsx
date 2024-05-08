@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Content,
@@ -7,8 +7,13 @@ import {
   LogoTitle,
   Button,
 } from "./styles";
+import Modal from "react-modal";
 
-function Header() {
+interface HeaderProps {
+  onOpenNewTransactionModal: () => void;
+}
+
+function Header({ onOpenNewTransactionModal }: HeaderProps) {
   return (
     <Container>
       <Content>
@@ -16,7 +21,7 @@ function Header() {
           <LogoIcon></LogoIcon>
           <LogoTitle>dt money</LogoTitle>
         </Logo>
-        <Button>Nova transação</Button>
+        <Button onClick={onOpenNewTransactionModal}>Nova transação</Button>
       </Content>
     </Container>
   );
