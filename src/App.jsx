@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Summary from "./components/Summary";
 import TransactionsList from "./components/TransactionsList";
 import Modal from "react-modal";
+import NewTransactionModal from "./components/NewTransactionModal";
 
 function App() {
   const StyledTitle = styled.h1`
@@ -31,12 +32,10 @@ function App() {
       <Summary />
       <TransactionsList />
       <StyledTitle>Carol e Vitu</StyledTitle>
-      <Modal
+      <NewTransactionModal
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
-      >
-        <h2>Nova transação</h2>
-      </Modal>
+      />
     </>
   );
 }
