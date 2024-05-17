@@ -59,6 +59,7 @@ function NewTransactionModal({
           onChange={(event) => setValue(Number(event.target.value))}
           type="number"
         />
+
         <TransactionTypeContainer>
           <RadioBox
             type="button"
