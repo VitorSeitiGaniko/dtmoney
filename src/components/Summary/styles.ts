@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 1120px;
@@ -24,7 +24,7 @@ export const Card = styled.div`
   }
 
   > span {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;

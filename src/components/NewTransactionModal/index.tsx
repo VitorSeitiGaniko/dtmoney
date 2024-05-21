@@ -1,14 +1,14 @@
-import { FormEvent, React, useState } from "react";
-import Modal from "react-modal";
+import { FormEvent, React, useState } from 'react';
+import Modal from 'react-modal';
 import {
   Container,
   IconIncome,
   IconOutcome,
   TransactionTypeContainer,
   RadioBox,
-} from "./styles";
+} from './styles';
 
-import { api } from "../../services/api";
+import { api } from '../../services/api';
 
 interface NewTransactionModalProps {
   isOpen: boolean;
@@ -19,22 +19,22 @@ function NewTransactionModal({
   isOpen,
   onRequestClose,
 }: NewTransactionModalProps) {
-  const [type, setType] = useState("deposit");
-  const [title, setTitle] = useState("");
+  const [type, setType] = useState('deposit');
+  const [title, setTitle] = useState('');
   const [value, setValue] = useState(0);
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState('');
 
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
 
-    var data = {
+    const data = {
       title,
       value,
       type,
       category,
     };
 
-    api.post("/transactions", data);
+    api.post('/transactions', data);
   }
 
   return (
@@ -63,9 +63,9 @@ function NewTransactionModal({
         <TransactionTypeContainer>
           <RadioBox
             type="button"
-            isActive={type === "deposit"}
+            isActive={type === 'deposit'}
             activeColor="green"
-            onClick={() => setType("deposit")}
+            onClick={() => setType('deposit')}
           >
             <IconIncome />
             <span>Entrada</span>
@@ -73,9 +73,9 @@ function NewTransactionModal({
 
           <RadioBox
             type="button"
-            isActive={type === "withdraw"}
+            isActive={type === 'withdraw'}
             activeColor="red"
-            onClick={() => setType("withdraw")}
+            onClick={() => setType('withdraw')}
           >
             <IconOutcome />
             <span>Saída</span>

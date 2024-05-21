@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.header`
   background: var(--blue);
@@ -26,7 +26,7 @@ export const LogoIcon = styled.span`
 `;
 
 export const LogoTitle = styled.span`
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 600;
   margin-left: 16px;
@@ -39,7 +39,7 @@ export const Button = styled.button`
   border-radius: 5px;
   background: var(--blue-light);
 
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;

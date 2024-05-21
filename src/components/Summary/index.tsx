@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Card, IconExport, IconImport, IconTotal } from "./styles";
+import React from 'react';
+import { Container, Card, IconExport, IconImport, IconTotal } from './styles';
 
 function Summary() {
   return (

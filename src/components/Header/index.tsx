@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from 'react';
 import {
   Container,
   Content,
@@ -6,8 +6,7 @@ import {
   LogoIcon,
   LogoTitle,
   Button,
-} from "./styles";
-import Modal from "react-modal";
+} from './styles';
 
 interface HeaderProps {
   onOpenNewTransactionModal: () => void;
@@ -15,7 +14,7 @@ interface HeaderProps {
 
 function Header({ onOpenNewTransactionModal }: HeaderProps) {
   return (
-    <Container>
+    <Container> 
       <Content>
         <Logo>
           <LogoIcon></LogoIcon>
