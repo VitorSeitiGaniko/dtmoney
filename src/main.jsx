@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import { Model, createServer } from 'miragejs'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import { Model, createServer } from 'miragejs';
 
 createServer({
   models: {
@@ -28,25 +28,25 @@ createServer({
           createdAt: new Date('2021-02-14 11:00:00'),
         },
       ],
-    })
+    });
   },
 
   routes() {
-    this.namespace = 'api'
+    this.namespace = 'api';
 
     this.get('/transactions', () => {
-      return this.schema.all('transaction')
-    })
+      return this.schema.all('transaction');
+    });
 
     this.post('/transactions', (schema, request) => {
-      const data = JSON.parse(request.requestBody)
-      return schema.create('transaction', data)
-    })
+      const data = JSON.parse(request.requestBody);
+      return schema.create('transaction', data);
+    });
   },
-})
+});
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+);
